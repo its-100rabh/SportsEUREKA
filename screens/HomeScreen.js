@@ -64,25 +64,25 @@ const HomeScreen = ({ navigation }) => {
                     <View style={{ width: 315, height: 220, backgroundColor: '#135def', borderRadius: 10, padding: 20 }}>
                         <FontAwesome5 name="user-ninja" size={150} color="#104ec9" style={{ position: 'absolute', right: 20, top: 30 }} />
                         <View style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#296ff0', borderRadius: 10, alignSelf: 'flex-start' }}>
-                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 10, color: '#FFF' }}>HYBRID</Text>
+                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 13, color: '#FFF' }}>HYBRID</Text>
                         </View>
-                        <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 18, color: '#FFF', marginTop: 10 }}>{`MMA\nFIGHT CLUB`}</Text>
-                        <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 12, color: '#FFF', marginTop: 10 }}>{`The MMA Club opens its\ndoors to you!!`}</Text>
+                        <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: '#FFF', marginTop: 10 }}>{`MMA\nFIGHT CLUB`}</Text>
+                        <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 15, color: '#FFF', marginTop: 10 }}>{`The MMA Club opens its\ndoors to you!!`}</Text>
                         <TouchableOpacity style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#FFF', borderRadius: 10, alignSelf: 'flex-start', marginTop: 10 }}>
-                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 10, color: '#135def' }}>Discover the club</Text>
+                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#135def' }}>Discover the club</Text>
                         </TouchableOpacity>
                     </View>
 
                     <View style={{ width: 315, height: 220, backgroundColor: '#f94045', borderRadius: 10, padding: 20, marginLeft: 20 }}>
                         {/* <FontAwesome5 name="user-ninja" size={150} color="#104ec9" style={{ position: 'absolute', right: 20, top: 30 }} /> */}
-                        <MaterialCommunityIcons name="racing-helmet" size={150} style={{ position: 'absolute', right: 10, top: 30 }} color="#bf170b" />
+                        <MaterialCommunityIcons name="racing-helmet" size={150} style={{ position: 'absolute', left: 170, top: 40 }} color="#bf170b" />
                         <View style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#bf170b', borderRadius: 10, alignSelf: 'flex-start' }}>
-                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 10, color: '#FFF' }}>MOTORSPORTS</Text>
+                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 13, color: '#FFF' }}>MOTORSPORTS</Text>
                         </View>
-                        <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 18, color: '#FFF', marginTop: 10 }}>{`F1 \nRACING CLUB`}</Text>
-                        <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 12, color: '#FFF', marginTop: 10 }}>{`The F1 Racing Club opens its\ndoors to you!!`}</Text>
+                        <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: '#FFF', marginTop: 10 }}>{`F1 \nRACING CLUB`}</Text>
+                        <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 15, color: '#FFF', marginTop: 10 }}>{`The F1 Racing Club opens\nits doors to you!!`}</Text>
                         <TouchableOpacity style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#FFF', borderRadius: 10, alignSelf: 'flex-start', marginTop: 10 }}>
-                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 10, color: '#135def' }}>Discover the club</Text>
+                            <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#bf170b' }}>Discover the club</Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
