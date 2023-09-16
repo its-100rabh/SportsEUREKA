@@ -2,12 +2,40 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, Dimensions, TextInput, Modal, Pressable } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
+import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
 
 const CategoriesScreen = ({ navigation }) => {
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredCategories, setFilteredCategories] = useState([]);
+
+    const categories = [
+        { name: 'Volleyball', color: '#f8864a', backgroundColor: '#fdd6c5', icon: 'volleyball-ball' },
+        { name: 'Basketball', color: '#f84145', backgroundColor: '#fdc2c4', icon: 'basketball-ball' },
+        { name: 'Football', color: '#c59207', backgroundColor: '#fcedc4', icon: 'football-ball' },
+        { name: 'Cricket', color: '#5d27a1', backgroundColor: '#cbb9e1', icon: 'sports-cricket' },
+        { name: 'Bowling', color: '#91be6d', backgroundColor: '#dcead1', icon: 'bowling-ball' },
+        { name: 'Cycling', color: '#2858a2', backgroundColor: '#b8c8e1', icon: 'bicycle' },
+        { name: 'MMA', color: '#277da0', backgroundColor: '#b9d5e0', icon: 'user-ninja' },
+        { name: 'Tennis', color: '#2db9b2', backgroundColor: '#bdeeeb', icon: 'table-tennis' },
+        { name: 'Baseball', color: '#43aa8c', backgroundColor: '#c2e3da', icon: 'baseball-ball' },
+        { name: 'F1 Motorsports', color: '#f8864a', backgroundColor: "#fdd6c5", icon: 'racing-helmet' },
+        { name: 'Swimming', color: '#2858a2', backgroundColor: '#b9c9e0', icon: 'swimmer' },
+        { name: 'Hockey', color: '#864eca', backgroundColor: '#cbb9e1', icon: 'sports-hockey' },
+    ];
+
+    useEffect(() => {
+        // Filter categories based on search query
+        const filtered = categories.filter((category) =>
+            category.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        setFilteredCategories(filtered);
+    }, [searchQuery]);
 
     const { width, height } = Dimensions.get('window');
     const [fontsLoaded, error] = useFonts({
@@ -34,6 +62,37 @@ const CategoriesScreen = ({ navigation }) => {
         return null;
     }
 
+    const renderCategory = (category, index) => (
+        <TouchableOpacity
+            key={index}
+            style={{
+                width: 150,
+                height: 150,
+                margin: 10,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: category.backgroundColor,
+                borderRadius: 10,
+            }}
+        >
+            {category.icon === 'volleyball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'basketball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'football-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'sports-cricket' && <MaterialIcons name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'bowling-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'bicycle' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'user-ninja' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'table-tennis' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'baseball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'racing-helmet' && <MaterialCommunityIcons name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'swimmer' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'sports-hockey' && <MaterialIcons name={category.icon} size={35} color={category.color} />}
+            <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: category.color }}>
+                {category.name}
+            </Text>
+        </TouchableOpacity>
+    );
+
     return (
         <View style={{ flex: 1, backgroundColor: '#ffffff', padding: 20 }}>
 
@@ -49,98 +108,18 @@ const CategoriesScreen = ({ navigation }) => {
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginHorizontal: 12, marginVertical: 20, padding: 10, backgroundColor: '#f5f6fa', borderRadius: 10 }}>
                     <FontAwesome5 name="search" size={20} color="#d2d5da" />
-                    <TextInput placeholder='Search for a category' placeholderTextColor={'#d2d5da'} style={{ fontFamily: 'Poppins-Medium', marginLeft: 10, flex: 1 }} />
+                    <TextInput placeholder='Search for a category' placeholderTextColor={'#d2d5da'} style={{ fontFamily: 'Poppins-Medium', marginLeft: 10, flex: 1 }} onChangeText={(text) => setSearchQuery(text)} />
                 </View>
 
             </Animated.View>
 
-            <Animated.View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 25 }} entering={FadeInDown.delay(900).duration(300)}>
-                <View style={{ backgroundColor: '#fdd6c5', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="volleyball-ball" size={30} color="#f8864a" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f8864a', marginTop: 10 }}>{`Volleyball`}</Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    {filteredCategories.map((category, index) => renderCategory(category, index))}
                 </View>
-
-                <View style={{ backgroundColor: '#fdc2c4', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="basketball-ball" size={30} color="#f84145" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f84145', marginTop: 10 }}>{`Basketball`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#c2e3da', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="baseball-ball" size={30} color="#43aa8c" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#43aa8c', marginTop: 10 }}>{`Baseball`}</Text>
-                </View>
-            </Animated.View>
-
-            <Animated.View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }} entering={FadeInDown.delay(1200).duration(300)}>
-
-                <View style={{ backgroundColor: '#fcedc4', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="football-ball" size={30} color="#f8c848" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f8c848', marginTop: 10 }}>{`Football`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#bdeeeb', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="table-tennis" size={30} color="#31ccc4" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#31ccc4', marginTop: 10 }}>{`Tennis`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#cbb9e1', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="heartbeat" size={30} color="#9d70d4" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#9d70d4', marginTop: 10 }}>{`Fitness`}</Text>
-                </View>
-            </Animated.View>
-
-            <Animated.View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }} entering={FadeInDown.delay(1500).duration(300)}>
-                <View style={{ backgroundColor: '#dcead1', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="bowling-ball" size={30} color="#91be6d" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#91be6d', marginTop: 10 }}>{`Bowling`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#b8c8e1', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="bicycle" size={30} color="#2858a2" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#2858a2', marginTop: 10 }}>{`Bicycle`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#b9d5e0', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="user-ninja" size={30} color="#277da0" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#277da0', marginTop: 10 }}>{`Kung Fu`}</Text>
-                </View>
-            </Animated.View>
-
-            <Animated.View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }} entering={FadeInDown.delay(1800).duration(300)}>
-                <View style={{ backgroundColor: '#b9c9e0', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="swimmer" size={30} color="#2858a2" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#2858a2', marginTop: 10 }}>{`Swimming`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#cbb9e1', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="running" size={30} color="#5d27a1" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#5d27a1', marginTop: 10 }}>{`Running`}</Text>
-                </View>
-
-                <View style={{ backgroundColor: '#c9d2db', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-                    <FontAwesome5 name="mountain" size={30} color="#577591" />
-                    <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#577591', marginTop: 10 }}>{`Mountain`}</Text>
-                </View>
-            </Animated.View>
-
-            <Animated.View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }} entering={FadeInDown.delay(2100).duration(300)}>
-                <View style={{ backgroundColor: '#eab7ef', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-
-                </View>
-
-                <View style={{ backgroundColor: '#b0b9c8', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-
-                </View>
-
-                <View style={{ backgroundColor: '#c8c1f5', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
-
-                </View>
-            </Animated.View>
-
-
-
+            </ScrollView>
         </View>
     );
-}
+};
 
 export { CategoriesScreen };
