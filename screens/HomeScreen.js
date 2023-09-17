@@ -10,8 +10,10 @@ import LottieView from 'lottie-react-native';
 import MaskedView from '@react-native-masked-view/masked-view';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
-const HomeScreen = ({ navigation }) => {
-
+import { useNavigation } from '@react-navigation/native';
+import Football from '../sport_screens/Football';
+const HomeScreen = () => {
+    const navigation = useNavigation();
     const { width, height } = Dimensions.get('window');
     const [fontsLoaded, error] = useFonts({
         'Poppins-Black': require('../assets/fonts/Poppins/Poppins-Black.ttf'),
@@ -104,7 +106,8 @@ const HomeScreen = ({ navigation }) => {
                 </View>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ flexGrow: 0, }}>
 
-                    <TouchableOpacity style={{ backgroundColor: '#fdd6c5', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
+                    <TouchableOpacity style={{ backgroundColor: '#fdd6c5', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}
+                        onPress={() => navigation.navigate('Football')}>
                         {/* <FontAwesome5 name="volleyball-ball" size={30} color="#f8864a" /> */}
                         <Ionicons name="football" size={30} color="#f8864a" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f8864a', marginTop: 10 }}>{`Football`}</Text>
