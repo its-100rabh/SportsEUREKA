@@ -13,7 +13,7 @@ export default function AppNavigation() {
             <Stack.Navigator>
                 <Stack.Screen name="Home" options={{ headerShown: false }} component={HomeScreen} />
                 <Stack.Screen name="Sports" options={{ headerShown: false }} component={CategoriesScreen} />
-                <Stack.Screen name="Football" component={Football} />
+                <Stack.Screen name="Football" options={{ headerShown: false }} component={Football} />
             </Stack.Navigator>
         </NavigationContainer>
     )
