@@ -16,7 +16,7 @@ export default function Football({ navigation }) {
                     </TouchableOpacity></SafeAreaView>
                 <View>
                     <Image
-                        source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Football_in_Bloomington%2C_Indiana%2C_1996.jpg" }}
+                        source={{ uri: "https://thephysiocompany.co.uk/wp-content/uploads/football.jpg" }}
                         style={{ width, height: height * 0.55 }}
                     />
                     <LinearGradient
@@ -36,53 +36,54 @@ export default function Football({ navigation }) {
                     {"\n\n"}
                 </Text>
                 <Text className="text-white text-2xl font-bold tracking-wider px-4">RULES</Text>
-                <Text className="text-neutral-400 mx-4 tracking-wide text-base">• Objective:
-                    {"\n"}
+                <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Objective:</Text>
+                    
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
                     Score goals by getting the ball into the opposing team's net. The team with the most goals at the end of the match wins.
-                    {"\n\n"}
-                    • Teams and Players:
-                    {"\n"}
-                    - Two teams with eleven players each (including a goalkeeper) on the field at a time.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Teams and Players:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - Two teams with eleven players each (including a goalkeeper) on the field at a time.{"\n"}
                     - Substitutions are allowed, typically with a limit per team.
-                    {"\n\n"}
-                    • Gameplay:
-                    {"\n"}
-                    - Played in two halves, usually 45 minutes each, with a halftime break.
-                    - The game begins with a kickoff from the center circle.
-                    - The ball is moved primarily by dribbling, passing, or shooting.
-                    - Players cannot use their hands or arms to handle the ball (except the goalkeeper within the penalty area).
-                    - Players can use their feet, head, chest, or any part of their body except the hands and arms.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Gameplay:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - Played in two halves, usually 45 minutes each, with a halftime break.{"\n"}
+                    - The game begins with a kickoff from the center circle.{"\n"}
+                    - The ball is moved primarily by dribbling, passing, or shooting.{"\n"}
+                    - Players cannot use their hands or arms to handle the ball (except the goalkeeper within the penalty area).{"\n"}
+                    - Players can use their feet, head, chest, or any part of their body except the hands and arms.{"\n"}
                     - Offside rule: A player is in an offside position if they are nearer to the opponent's goal line than both the ball and the second-to-last defender when the ball is played to them. Being in an offside position is not an offense, but becoming actively involved in play from an offside position is penalized.
-                    {"\n\n"}
-                    • Fouls and Free Kicks:
-                    {"\n"}
-                    - Fouls include actions such as tripping, pushing, and handball.
-                    - A direct free kick is awarded for serious fouls, and the opposing team can score directly from it.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Fouls and Free Kicks:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - Fouls include actions such as tripping, pushing, and handball.{"\n"}
+                    - A direct free kick is awarded for serious fouls, and the opposing team can score directly from it.{"\n"}
                     - An indirect free kick is awarded for less serious fouls, and a goal can only be scored if the ball touches another player before entering the net.
-                    {"\n\n"}
-                    • Penalty Kicks:
-                    {"\n"}
-                    - A penalty kick is awarded when a foul occurs inside the penalty area.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Penalty Kicks:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - A penalty kick is awarded when a foul occurs inside the penalty area.{"\n"}
                     - It's a one-on-one situation between the kicker and the goalkeeper from the penalty spot, 12 yards from the goal.
-                    {"\n\n"}
-                    • Throw-Ins, Corner Kicks, and Goal Kicks:
-                    {"\n"}
-                    - Throw-ins are awarded when the ball goes out of play over the touchline.
-                    - Corner kicks are awarded when the ball goes out of play over the goal line, last touched by the defending team.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Throw-Ins, Corner Kicks, and Goal Kicks:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - Throw-ins are awarded when the ball goes out of play over the touchline.{"\n"}
+                    - Corner kicks are awarded when the ball goes out of play over the goal line, last touched by the defending team.{"\n"}
                     - Goal kicks are awarded when the ball goes out of play over the goal line, last touched by the attacking team.
-                    {"\n\n"}
-                    • Cards and Disciplinary Actions:
-                    {"\n"}
-                    - Yellow card: A warning for a serious foul or unsporting behavior. Two yellow cards result in a red card.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Cards and Disciplinary Actions:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - Yellow card: A warning for a serious foul or unsporting behavior. Two yellow cards result in a red card.{"\n"}
                     - Red card: Ejection from the game for a serious foul or severe misconduct. The team plays with one player less for the remainder of the game.
-                    {"\n\n"}
-                    • Officiating:
-                    {"\n"}
-                    - A referee enforces the rules and makes decisions during the game.
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Officiating:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
+                    - A referee enforces the rules and makes decisions during the game.{"\n"}
                     - Assistant referees (linesmen) assist in making offside calls and other decisions.
-                    {"\n\n"}
-                    • Ties and Extra Time:
-                    {"\n"}
+                    {"\n"}</Text>
+                    <Text className="text-neutral-200 mx-4 font-bold tracking-wide text-base">• Ties and Extra Time:</Text>
+                    <Text className="text-neutral-400 mx-4 tracking-wide text-base">
                     - In some competitions, tied matches are decided by extra time and, if needed, a penalty shootout.
                 </Text>
             </View>

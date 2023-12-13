@@ -59,13 +59,13 @@ const HomeScreen = () => {
 
                 <View style={{ paddingVertical: 25, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', }}>
                     <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 18, color: '#32363b' }}>New Clubs</Text>
-                    <TouchableOpacity>
+                    {/* <TouchableOpacity>
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#f9844b' }}>View all</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ flexGrow: 0 }}>
-                    <View style={{ width: 315, height: 220, backgroundColor: '#135def', borderRadius: 10, padding: 20 }}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={true} contentContainerStyle={{width:700}}>
+                    <View style={{ width: '60%', maxWidth: 310, backgroundColor: '#135def', borderRadius: 10, padding: 20 }}>
                         <FontAwesome5 name="user-ninja" size={150} color="#104ec9" style={{ position: 'absolute', right: 10, top: 30 }} />
                         <View style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#296ff0', borderRadius: 10, alignSelf: 'flex-start' }}>
                             <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 13, color: '#FFF' }}>HYBRID</Text>
@@ -77,7 +77,7 @@ const HomeScreen = () => {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={{ width: 315, height: 220, backgroundColor: '#f94045', borderRadius: 10, padding: 20, marginLeft: 20 }}>
+                    <View style={{width: '65%', maxWidth: 350, backgroundColor: '#f94045', borderRadius: 10, padding: 20, marginLeft: 20 }}>
                         {/* <FontAwesome5 name="user-ninja" size={150} color="#104ec9" style={{ position: 'absolute', right: 20, top: 30 }} /> */}
                         <MaterialCommunityIcons name="racing-helmet" size={150} style={{ position: 'absolute', left: 170, top: 40 }} color="#bf170b" />
                         <View style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#bf170b', borderRadius: 10, alignSelf: 'flex-start' }}>
@@ -104,21 +104,21 @@ const HomeScreen = () => {
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#f9844b' }}>View all</Text>
                     </TouchableOpacity> */}
                 </View>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ flexGrow: 0, }}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{width:380}}>
 
-                    <TouchableOpacity style={{ backgroundColor: '#fdd6c5', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}
+                    <TouchableOpacity style={{ backgroundColor: '#fdd6c5', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}
                         onPress={() => navigation.navigate('Football')}>
                         {/* <FontAwesome5 name="volleyball-ball" size={30} color="#f8864a" /> */}
                         <Ionicons name="football" size={30} color="#f8864a" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f8864a', marginTop: 10 }}>{`Football`}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ backgroundColor: '#fdc2c4', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }}>
+                    <TouchableOpacity style={{ backgroundColor: '#fdc2c4', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }} onPress={() => navigation.navigate('Basketball')}>
                         <FontAwesome5 name="basketball-ball" size={30} color="#f84145" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f84145', marginTop: 10 }}>{`Basketball`}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ backgroundColor: '#c2e3da', width: 100, height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }}>
+                    <TouchableOpacity style={{ backgroundColor: '#c2e3da', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }} onPress={() => navigation.navigate('Cricket')}>
                         {/* <FontAwesome5 name="baseball-ball" size={30} color="#43aa8c" /> */}
                         <MaterialIcons name="sports-cricket" size={30} color="#43aa8c" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#43aa8c', marginTop: 10 }}>{`Cricket`}</Text>
@@ -138,7 +138,7 @@ const HomeScreen = () => {
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#f9844b' }}>View all</Text>
                     </TouchableOpacity>
                 </View>
-                <ScrollView showsVerticalScrollIndicator={true}>
+                <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={{width:400}}>
                     <View style={{ flexDirection: 'column', marginBottom: 20 }}>
                         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
                             <TouchableOpacity
