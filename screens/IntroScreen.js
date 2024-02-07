@@ -95,7 +95,7 @@ const IntroScreen = () => {
         </Text>
         <Pressable
           style={{
-            backgroundColor: "#fdd6c5",
+            backgroundColor: "#b8c8e1",
             width: "70%",
             height: "4%",
             borderRadius: 10,
@@ -110,7 +110,7 @@ const IntroScreen = () => {
             style={{
               fontFamily: "Poppins-Bold",
               fontSize: 22,
-              color: "#f8864a",
+              color: "#2858a2",
               padding: "auto",
             }}
           >

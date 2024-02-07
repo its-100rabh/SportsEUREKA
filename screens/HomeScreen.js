@@ -50,8 +50,10 @@ const HomeScreen = () => {
     // Navigate to the new screen upon pressing the icon
     navigation.navigate("Introduction"); // Replace 'NewScreen' with the name of your screen
   };
-  
 
+  const handleDrawer = () => {
+    navigation.openDrawer(); // Open the drawer when the icon is pressed
+  };
   return (
     <ScrollView style={{ flex: 1, backgroundColor: "#ffffff", padding: 20 }}>
       <Animated.View entering={FadeInDown.delay(300).duration(300)}>
@@ -64,7 +66,9 @@ const HomeScreen = () => {
           }}
         >
           {/* <FontAwesome5 name="canadian-maple-leaf" size={30} color="#0c59ea" /> */}
-          <FontAwesome5 name="bars" size={24} color="#32363b" />
+          <Pressable onPress={handleDrawer}>
+            <FontAwesome5 name="bars" size={24} color="#32363b" />
+          </Pressable>
           <Text
             style={{
               fontFamily: "Poppins-Bold",
@@ -74,7 +78,7 @@ const HomeScreen = () => {
           >
             SportEUREKA
           </Text>
-          
+
           <Pressable onPress={handlePress}>
             <Entypo name="sports-club" size={30} color="#0c59ea" />
           </Pressable>
