@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView, Dimensions, TextInput, Modal, Pressable } from 'react-native';
+import { View, Text, Image, Pressable, ScrollView, Dimensions, TextInput, Modal } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -59,9 +59,9 @@ const HomeScreen = () => {
 
                 <View style={{ paddingVertical: 25, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', }}>
                     <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 18, color: '#32363b' }}>New Clubs</Text>
-                    {/* <TouchableOpacity>
+                    {/* <Pressable>
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#f9844b' }}>View all</Text>
-                    </TouchableOpacity> */}
+                    </Pressable> */}
                 </View>
 
                 <ScrollView horizontal showsHorizontalScrollIndicator={true} contentContainerStyle={{width:700}}>
@@ -72,9 +72,9 @@ const HomeScreen = () => {
                         </View>
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: '#FFF', marginTop: 10 }}>{`MMA\nFIGHT CLUB`}</Text>
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 15, color: '#FFF', marginTop: 10 }}>{`The MMA Club opens its\ndoors to you!!`}</Text>
-                        <TouchableOpacity style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#FFF', borderRadius: 10, alignSelf: 'flex-start', marginTop: 10 }}>
+                        <Pressable style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#FFF', borderRadius: 10, alignSelf: 'flex-start', marginTop: 10 }}>
                             <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#135def' }}>Discover the club</Text>
-                        </TouchableOpacity>
+                        </Pressable>
                     </View>
 
                     <View style={{width: '65%', maxWidth: 350, backgroundColor: '#f94045', borderRadius: 10, padding: 20, marginLeft: 20 }}>
@@ -85,9 +85,9 @@ const HomeScreen = () => {
                         </View>
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: '#FFF', marginTop: 10 }}>{`F1 \nRACING CLUB`}</Text>
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 15, color: '#FFF', marginTop: 10 }}>{`The F1 Racing Club opens\nits doors to you!!`}</Text>
-                        <TouchableOpacity style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#FFF', borderRadius: 10, alignSelf: 'flex-start', marginTop: 10 }}>
+                        <Pressable style={{ paddingVertical: 5, paddingHorizontal: 10, backgroundColor: '#FFF', borderRadius: 10, alignSelf: 'flex-start', marginTop: 10 }}>
                             <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#bf170b' }}>Discover the club</Text>
-                        </TouchableOpacity>
+                        </Pressable>
                     </View>
                 </ScrollView>
             </Animated.View>
@@ -100,29 +100,29 @@ const HomeScreen = () => {
 
                 <View style={{ paddingVertical: 25, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', }}>
                     <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 18, color: '#32363b' }}>Popular</Text>
-                    {/* <TouchableOpacity onPress={() => navigation.navigate('Sports')}>
+                    {/* <Pressable onPress={() => navigation.navigate('Sports')}>
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#f9844b' }}>View all</Text>
-                    </TouchableOpacity> */}
+                    </Pressable> */}
                 </View>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{width:380}}>
 
-                    <TouchableOpacity style={{ backgroundColor: '#fdd6c5', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}
+                    <Pressable style={{ backgroundColor: '#fdd6c5', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}
                         onPress={() => navigation.navigate('Football')}>
                         {/* <FontAwesome5 name="volleyball-ball" size={30} color="#f8864a" /> */}
                         <Ionicons name="football" size={30} color="#f8864a" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f8864a', marginTop: 10 }}>{`Football`}</Text>
-                    </TouchableOpacity>
+                    </Pressable>
 
-                    <TouchableOpacity style={{ backgroundColor: '#fdc2c4', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }} onPress={() => navigation.navigate('Basketball')}>
+                    <Pressable style={{ backgroundColor: '#fdc2c4', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }} onPress={() => navigation.navigate('Basketball')}>
                         <FontAwesome5 name="basketball-ball" size={30} color="#f84145" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f84145', marginTop: 10 }}>{`Basketball`}</Text>
-                    </TouchableOpacity>
+                    </Pressable>
 
-                    <TouchableOpacity style={{ backgroundColor: '#c2e3da', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }} onPress={() => navigation.navigate('Cricket')}>
+                    <Pressable style={{ backgroundColor: '#c2e3da', width: '30%', height: 100, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginLeft: 20 }} onPress={() => navigation.navigate('Cricket')}>
                         {/* <FontAwesome5 name="baseball-ball" size={30} color="#43aa8c" /> */}
                         <MaterialIcons name="sports-cricket" size={30} color="#43aa8c" />
                         <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#43aa8c', marginTop: 10 }}>{`Cricket`}</Text>
-                    </TouchableOpacity>
+                    </Pressable>
 
                 </ScrollView>
             </Animated.View>
@@ -134,14 +134,14 @@ const HomeScreen = () => {
 
                 <View style={{ paddingVertical: 25, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', }}>
                     <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 18, color: '#32363b' }}>Clubs</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('Sports')}>
+                    <Pressable onPress={() => navigation.navigate('Sports')}>
                         <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 12, color: '#f9844b' }}>View all</Text>
-                    </TouchableOpacity>
+                    </Pressable>
                 </View>
                 <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={{width:400}}>
                     <View style={{ flexDirection: 'column', marginBottom: 20 }}>
                         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-                            <TouchableOpacity
+                            <Pressable
                                 style={{
                                     backgroundColor: '#bdeeeb',
                                     width: 165,
@@ -154,10 +154,11 @@ const HomeScreen = () => {
                             >
                                 <FontAwesome5 name="volleyball-ball" size={30} color="#28a49e" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#28a49e', marginTop: 10 }}>{`Volleyball`}</Text>
-                                {/* Content for the first TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the first Pressable */}
+                            </Pressable>
 
-                            <TouchableOpacity
+                            <Pressable
+                            onPress={() => navigation.navigate('Basketball')}
                                 style={{
                                     backgroundColor: '#c9d2db',
                                     width: 165,
@@ -169,12 +170,12 @@ const HomeScreen = () => {
                             >
                                 <FontAwesome5 name="basketball-ball" size={30} color="#577591" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#577591', marginTop: 10 }}>{`Basketball`}</Text>
-                                {/* Content for the second TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the second Pressable */}
+                            </Pressable>
                         </View>
 
                         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-                            <TouchableOpacity
+                            <Pressable
                                 style={{
                                     backgroundColor: '#dcead1',
                                     width: 165,
@@ -187,10 +188,11 @@ const HomeScreen = () => {
                             >
                                 <FontAwesome5 name="baseball-ball" size={30} color="#7bb04f" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#7bb04f', marginTop: 10 }}>{`Baseball`}</Text>
-                                {/* Content for the third TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the third Pressable */}
+                            </Pressable>
 
-                            <TouchableOpacity
+                            <Pressable
+                            onPress={() => navigation.navigate('Football')}
                                 style={{
                                     backgroundColor: '#b8c8e1',
                                     width: 165,
@@ -202,13 +204,13 @@ const HomeScreen = () => {
                             >
                                 <Ionicons name="football" size={30} color="#2858a2" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#2858a2', marginTop: 10 }}>{`Football`}</Text>
-                                {/* Content for the fourth TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the fourth Pressable */}
+                            </Pressable>
                         </View>
 
                         {/* Repeat similar blocks for more rows */}
                         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-                            <TouchableOpacity
+                            <Pressable
                                 style={{
                                     backgroundColor: '#fdc2c4',
                                     width: 165,
@@ -221,10 +223,10 @@ const HomeScreen = () => {
                             >
                                 <FontAwesome5 name="table-tennis" size={30} color="#f84145" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f84145', marginTop: 10 }}>{`Tennis`}</Text>
-                                {/* Content for the third TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the third Pressable */}
+                            </Pressable>
 
-                            <TouchableOpacity
+                            <Pressable
                                 style={{
                                     backgroundColor: '#fdd6c5',
                                     width: 165,
@@ -236,11 +238,11 @@ const HomeScreen = () => {
                             >
                                 <FontAwesome5 name="bowling-ball" size={30} color="#f76c22" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#f76c22', marginTop: 10 }}>{`Bowling`}</Text>
-                                {/* Content for the fourth TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the fourth Pressable */}
+                            </Pressable>
                         </View>
                         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-                            <TouchableOpacity
+                            <Pressable
                                 style={{
                                     backgroundColor: '#c2e3da',
                                     width: 165,
@@ -253,10 +255,10 @@ const HomeScreen = () => {
                             >
                                 <FontAwesome5 name="swimmer" size={30} color="#3a9279" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#3a9279', marginTop: 10 }}>{`Swimming`}</Text>
-                                {/* Content for the third TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the third Pressable */}
+                            </Pressable>
 
-                            <TouchableOpacity
+                            <Pressable
                                 style={{
                                     backgroundColor: '#fcedc4',
                                     width: 165,
@@ -268,8 +270,8 @@ const HomeScreen = () => {
                             >
                                 <MaterialIcons name="sports-hockey" size={30} color="#c59207" />
                                 <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 16, color: '#c59207', marginTop: 10 }}>{`Hockey`}</Text>
-                                {/* Content for the fourth TouchableOpacity */}
-                            </TouchableOpacity>
+                                {/* Content for the fourth Pressable */}
+                            </Pressable>
                         </View>
 
                     </View>

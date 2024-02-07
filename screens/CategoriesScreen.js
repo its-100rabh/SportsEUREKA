@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView, Dimensions, TextInput, Modal, Pressable } from 'react-native';
+import { View, Text, Image, Pressable, ScrollView, Dimensions, TextInput, Modal } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -63,7 +63,7 @@ const CategoriesScreen = ({ navigation }) => {
     }
 
     const renderCategory = (category, index) => (
-        <TouchableOpacity
+        <Pressable
             key={index}
             style={{
                 width: 150,
@@ -76,9 +76,9 @@ const CategoriesScreen = ({ navigation }) => {
             }}
         >
             {category.icon === 'volleyball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
-            {category.icon === 'basketball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'basketball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Basketball')}/>}
             {category.icon === 'football-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Football')} />}
-            {category.icon === 'sports-cricket' && <MaterialIcons name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'sports-cricket' && <MaterialIcons name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Cricket')}/>}
             {category.icon === 'bowling-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
             {category.icon === 'bicycle' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
             {category.icon === 'user-ninja' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
@@ -90,7 +90,7 @@ const CategoriesScreen = ({ navigation }) => {
             <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: category.color }}>
                 {category.name}
             </Text>
-        </TouchableOpacity>
+        </Pressable>
     );
 
     return (

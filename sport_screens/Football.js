@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, ScrollView, Image, Pressable, Dimensions } from 'react-native';
 import React from 'react';
 import { CheckBadgeIcon, ChevronLeftIcon } from 'react-native-heroicons/outline';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -11,9 +11,9 @@ export default function Football({ navigation }) {
         <ScrollView contentContainerStyle={{ paddingBottom: 20 }} className="flex-1 bg-neutral-900">
             <View>
                 <SafeAreaView className={"absolute z-20 w-full flex-row justify-between items-center px-4 mt-5"}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={{ color: "#eab308" }} className="rounded-xl p-1">
+                    <Pressable onPress={() => navigation.goBack()} style={{ color: "#eab308" }} className="rounded-xl p-1">
                         <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
-                    </TouchableOpacity></SafeAreaView>
+                    </Pressable></SafeAreaView>
                 <View>
                     <Image
                         source={{ uri: "https://thephysiocompany.co.uk/wp-content/uploads/football.jpg" }}
