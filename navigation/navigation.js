@@ -7,6 +7,7 @@ import Basketball from "../sport_screens/Basketball";
 import Cricket from "../sport_screens/Cricket";
 import IntroScreen from "../screens/IntroScreen";
 import DrawerNavigation from "./drawernavigation";
+import Baseball from "../sport_screens/Baseball";
 const Stack = createNativeStackNavigator();
 // import { View, Text } from 'react-native'
 // import React from 'react'
@@ -49,6 +50,11 @@ export default function AppNavigation() {
           name="Cricket"
           options={{ headerShown: false }}
           component={Cricket}
+        />
+        <Stack.Screen
+          name="Baseball"
+          options={{ headerShown: false }}
+          component={Baseball}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -473,6 +473,7 @@ const HomeScreen = () => {
                   alignItems: "center",
                   marginRight: 20,
                 }}
+                onPress={() => navigation.navigate("Baseball")}
               >
                 <FontAwesome5 name="baseball-ball" size={30} color="#7bb04f" />
                 <Text
