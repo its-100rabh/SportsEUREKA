@@ -75,7 +75,7 @@ const CategoriesScreen = ({ navigation }) => {
                 borderRadius: 10,
             }}
         >
-            {category.icon === 'volleyball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'volleyball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Volleyball')}/>}
             {category.icon === 'basketball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Basketball')}/>}
             {category.icon === 'football-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Football')} />}
             {category.icon === 'sports-cricket' && <MaterialIcons name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Cricket')}/>}
