@@ -408,6 +408,7 @@ const HomeScreen = () => {
           <View style={{ flexDirection: "column", marginBottom: 20 }}>
             <View style={{ flexDirection: "row", marginBottom: 20 }}>
               <Pressable
+                onPress={() => navigation.navigate("Volleyball")}
                 style={{
                   backgroundColor: "#bdeeeb",
                   width: 165,
