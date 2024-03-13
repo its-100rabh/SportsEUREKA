@@ -16,7 +16,7 @@ export default function Tennis({ navigation }) {
                     </Pressable></SafeAreaView>
                 <View>
                     <Image
-                        source={{ uri: "https://cdn.pixabay.com/photo/2016/03/27/17/47/tennis-1284524_960_720.jpg" }}
+                        source={{ uri: "https://img.olympics.com/images/image/private/t_s_w960/t_s_16_9_g_auto/f_auto/primary/weyzoz6o394sxfkbest9" }}
                         style={{ width, height: height * 0.55 }}
                     />
                     <LinearGradient

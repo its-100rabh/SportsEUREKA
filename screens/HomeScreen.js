@@ -515,6 +515,7 @@ const HomeScreen = () => {
             {/* Repeat similar blocks for more rows */}
             <View style={{ flexDirection: "row", marginBottom: 20 }}>
               <Pressable
+                onPress={() => navigation.navigate("Tennis")}
                 style={{
                   backgroundColor: "#fdc2c4",
                   width: 165,
