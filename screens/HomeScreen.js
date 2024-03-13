@@ -539,6 +539,7 @@ const HomeScreen = () => {
               </Pressable>
 
               <Pressable
+              onPress={() => navigation.navigate("Bowling")}
                 style={{
                   backgroundColor: "#fdd6c5",
                   width: 165,
