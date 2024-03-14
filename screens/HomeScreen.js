@@ -563,6 +563,7 @@ const HomeScreen = () => {
             </View>
             <View style={{ flexDirection: "row", marginBottom: 20 }}>
               <Pressable
+              onPress={() => navigation.navigate("Swimming")}
                 style={{
                   backgroundColor: "#c2e3da",
                   width: 165,
