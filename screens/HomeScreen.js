@@ -539,7 +539,7 @@ const HomeScreen = () => {
               </Pressable>
 
               <Pressable
-              onPress={() => navigation.navigate("Bowling")}
+                onPress={() => navigation.navigate("Bowling")}
                 style={{
                   backgroundColor: "#fdd6c5",
                   width: 165,
@@ -563,7 +563,7 @@ const HomeScreen = () => {
             </View>
             <View style={{ flexDirection: "row", marginBottom: 20 }}>
               <Pressable
-              onPress={() => navigation.navigate("Swimming")}
+                onPress={() => navigation.navigate("Swimming")}
                 style={{
                   backgroundColor: "#c2e3da",
                   width: 165,
@@ -587,6 +587,7 @@ const HomeScreen = () => {
               </Pressable>
 
               <Pressable
+                onPress={() => navigation.navigate("Hockey")}
                 style={{
                   backgroundColor: "#fcedc4",
                   width: 165,
