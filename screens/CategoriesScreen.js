@@ -81,7 +81,7 @@ const CategoriesScreen = ({ navigation }) => {
             {category.icon === 'sports-cricket' && <MaterialIcons name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Cricket')}/>}
             {category.icon === 'bowling-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Bowling')}/>}
             {category.icon === 'bicycle' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Cycling')}/>}
-            {category.icon === 'user-ninja' && <FontAwesome5 name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'user-ninja' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('MMA')}/>}
             {category.icon === 'table-tennis' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Tennis')}/>}
             {category.icon === 'baseball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Baseball')}/>}
             {category.icon === 'racing-helmet' && <MaterialCommunityIcons name={category.icon} size={35} color={category.color} />}
