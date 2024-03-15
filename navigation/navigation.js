@@ -15,6 +15,7 @@ import Swimming from "../sport_screens/Swiming";
 import Hockey from "../sport_screens/Hockey";
 import Cycling from "../sport_screens/Cycling";
 import MMA from "../sport_screens/MMA";
+import F1Motorsports from "../sport_screens/F1";
 const Stack = createNativeStackNavigator();
 // import { View, Text } from 'react-native'
 // import React from 'react'
@@ -97,6 +98,11 @@ export default function AppNavigation() {
           name="MMA"
           options={{ headerShown: false }}
           component={MMA}
+        />
+        <Stack.Screen
+          name="F1"
+          options={{ headerShown: false }}
+          component={F1Motorsports}
         />
       </Stack.Navigator>
     </NavigationContainer>

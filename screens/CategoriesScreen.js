@@ -84,7 +84,7 @@ const CategoriesScreen = ({ navigation }) => {
             {category.icon === 'user-ninja' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('MMA')}/>}
             {category.icon === 'table-tennis' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Tennis')}/>}
             {category.icon === 'baseball-ball' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Baseball')}/>}
-            {category.icon === 'racing-helmet' && <MaterialCommunityIcons name={category.icon} size={35} color={category.color} />}
+            {category.icon === 'racing-helmet' && <MaterialCommunityIcons name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('F1')}/>}
             {category.icon === 'swimmer' && <FontAwesome5 name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Swimming')}/>}
             {category.icon === 'sports-hockey' && <MaterialIcons name={category.icon} size={35} color={category.color} onPress={() => navigation.navigate('Hockey')}/>}
             <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 20, color: category.color }}>
