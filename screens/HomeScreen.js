@@ -624,22 +624,91 @@ const HomeScreen = () => {
           <Text
             style={{
               fontFamily: "Poppins-Medium",
-              fontSize: 18,
+              fontSize: 24,
               color: "#32363b",
             }}
           >
             News
           </Text>
-          <Pressable onPress={() => navigation.navigate("Sports")}>
+          <FontAwesome5 name="newspaper" size={35} color="#f9844b" />
+        </View>
+        <View
+          style={{
+            width: "100%",
+            backgroundColor: "#135def",
+            marginBottom: 40,
+            borderRadius: 10,
+            padding: 20,
+          }}
+        >
+          <FontAwesome5
+            name="user-ninja"
+            size={150}
+            color="#104ec9"
+            style={{ position: "absolute", right: 10, top: 30 }}
+          />
+          <View
+            style={{
+              paddingVertical: 5,
+              paddingHorizontal: 10,
+              backgroundColor: "#296ff0",
+              borderRadius: 10,
+              alignSelf: "flex-start",
+            }}
+          >
             <Text
               style={{
                 fontFamily: "Poppins-Medium",
-                fontSize: 12,
-                color: "#f9844b",
+                fontSize: 13,
+                color: "#FFF",
               }}
             >
-              View all
+              UPDATES
             </Text>
+          </View>
+          <Text
+            style={{
+              fontFamily: "Poppins-Bold",
+              fontSize: 20,
+              color: "#FFF",
+              marginTop: 10,
+            }}
+          >{`Sports News`}</Text>
+          <Text
+            style={{
+              fontFamily: "Poppins-Medium",
+              fontSize: 15,
+              color: "#FFF",
+              marginTop: 10,
+            }}
+          >{`Get the latest updates from\nthe Sports world!`}</Text>
+          <Pressable
+            style={{
+              paddingVertical: 5,
+              paddingHorizontal: 20,
+              backgroundColor: "#FFF",
+              borderRadius: 10,
+              alignSelf: "flex-start",
+              marginTop: 10,
+              flexDirection: "row",
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "Poppins-Medium",
+                fontSize: 14,
+                color: "#135def",
+                paddingHorizontal: 10,
+              }}
+            >
+              View
+            </Text>
+            <FontAwesome5
+              name="arrow-right"
+              size={12}
+              color="#104ec9"
+              style={{ top: 3 }}
+            />
           </Pressable>
         </View>
       </Animated.View>
