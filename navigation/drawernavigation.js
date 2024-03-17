@@ -5,6 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { HomeScreen } from "../screens/HomeScreen";
 import { CategoriesScreen } from "../screens/CategoriesScreen";
 import IntroScreen from "../screens/IntroScreen";
+import NewsScreen from "../screens/NewsScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,6 +26,11 @@ const DrawerNavigation = () => {
         name="Introduction"
         options={{ headerShown: false }}
         component={IntroScreen}
+      />
+      <Drawer.Screen
+        name="News"
+        options={{ headerShown: false }}
+        component={NewsScreen}
       />
     </Drawer.Navigator>
   );

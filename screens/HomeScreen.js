@@ -683,6 +683,7 @@ const HomeScreen = () => {
             }}
           >{`Get the latest updates from\nthe Sports world!`}</Text>
           <Pressable
+          onPress={() => navigation.navigate("News")}
             style={{
               paddingVertical: 5,
               paddingHorizontal: 20,
