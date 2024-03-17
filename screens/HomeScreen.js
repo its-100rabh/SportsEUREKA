@@ -561,7 +561,7 @@ const HomeScreen = () => {
                 {/* Content for the fourth Pressable */}
               </Pressable>
             </View>
-            <View style={{ flexDirection: "row", marginBottom: 20 }}>
+            <View style={{ flexDirection: "row" }}>
               <Pressable
                 onPress={() => navigation.navigate("Swimming")}
                 style={{
@@ -683,7 +683,7 @@ const HomeScreen = () => {
             }}
           >{`Get the latest updates from\nthe Sports world!`}</Text>
           <Pressable
-          onPress={() => navigation.navigate("News")}
+            onPress={() => navigation.navigate("News")}
             style={{
               paddingVertical: 5,
               paddingHorizontal: 20,
