@@ -612,6 +612,37 @@ const HomeScreen = () => {
           </View>
         </ScrollView>
       </Animated.View>
+      <Animated.View entering={FadeInDown.delay(1200).duration(300)}>
+        <View
+          style={{
+            paddingVertical: 25,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "Poppins-Medium",
+              fontSize: 18,
+              color: "#32363b",
+            }}
+          >
+            News
+          </Text>
+          <Pressable onPress={() => navigation.navigate("Sports")}>
+            <Text
+              style={{
+                fontFamily: "Poppins-Medium",
+                fontSize: 12,
+                color: "#f9844b",
+              }}
+            >
+              View all
+            </Text>
+          </Pressable>
+        </View>
+      </Animated.View>
     </ScrollView>
   );
 };
