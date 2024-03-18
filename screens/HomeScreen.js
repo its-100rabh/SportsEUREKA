@@ -641,8 +641,8 @@ const HomeScreen = () => {
             padding: 20,
           }}
         >
-          <FontAwesome5
-            name="user-ninja"
+          <Entypo
+            name="news"
             size={150}
             color="#104ec9"
             style={{ position: "absolute", right: 10, top: 30 }}
