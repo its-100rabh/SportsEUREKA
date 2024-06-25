@@ -16,6 +16,8 @@ import Hockey from "../sport_screens/Hockey";
 import Cycling from "../sport_screens/Cycling";
 import MMA from "../sport_screens/MMA";
 import F1Motorsports from "../sport_screens/F1";
+import NewsOverview from "../screens/NewsOverview";
+import NewsScreen from "../screens/NewsScreen";
 const Stack = createNativeStackNavigator();
 // import { View, Text } from 'react-native'
 // import React from 'react'
@@ -104,6 +106,13 @@ export default function AppNavigation() {
           options={{ headerShown: false }}
           component={F1Motorsports}
         />
+
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="News"
+          component={NewsScreen}
+        />
+        <Stack.Screen name="NewsOverview" component={NewsOverview} />
       </Stack.Navigator>
     </NavigationContainer>
   );
