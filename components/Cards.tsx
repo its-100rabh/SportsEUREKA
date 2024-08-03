@@ -46,11 +46,11 @@ const Cards: React.FC<Props> = (props) => {
 
     return (
         <Pressable onPress={handlePress}>
-            <Card style={{ marginVertical: 10, backgroundColor: Theme.colors.elevation.level5 }}>
+            <Card style={{ marginVertical: 10, backgroundColor: Theme.colors.elevation.level5 , marginHorizontal:10}}>
                 {image_url ? (
-                    <Card.Cover borderRadius={10} source={{ uri: image_url }} />
+                    <Card.Cover source={{ uri: image_url }} />
                 ) : (
-                    <Image style={{ borderRadius: 10, height: 200 }} source={{ uri: fallbackImageUrl }} />
+                    <Image style={{  height: 200 }} source={{ uri: fallbackImageUrl }} />
                 )}
                 <Card.Title title={title} subtitle={formattedDescription} titleNumberOfLines={1} />
                 {props.handleDelete && (
