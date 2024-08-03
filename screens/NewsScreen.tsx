@@ -51,7 +51,7 @@ const NewsScreen = (props:ComponentNavigationProps) => {
                     <Chip key={cat}
                         mode='outlined'
                         style={styles.chipIten}
-                        textStyle={{ fontWeight: "400", color: "white", padding: 1 }}
+                        textStyle={{ fontWeight: "400", color: "black", padding: 1 }}
                         showSelectedOverlay
                         selected={selectedCategories.find((c) => cat === c) ? true : false}
                         onPress={() => handleSelect(cat)}
@@ -59,7 +59,7 @@ const NewsScreen = (props:ComponentNavigationProps) => {
                         {cat}
                     </Chip>
                 ))}
-                <Button mode="contained" style={styles.button} labelStyle={{ fontSize: 18, margin: "auto", marginTop: 14 }} icon={"sync"} onPress={handlePress}>REFRESH</Button>
+                <Button mode="contained" style={styles.button} icon={"sync" } contentStyle={styles.content} onPress={handlePress}></Button>
             </View>
             <FlatList onEndReached={() => handlePress()}
                 style={styles.flat}
@@ -93,15 +93,23 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         marginVertical: 10,
+        justifyContent:'center',
     },
     chipIten: {
         marginHorizontal: 5,
         marginVertical: 5,
     },
     button: {
-        maxWidth: 400,
-        padding: 0,
-        maxHeight: 40,
+        maxWidth: 40, // Set max width to 40 to match height for circular shape
+        maxHeight: 40, // Set max height to 40
+        marginHorizontal: 5,
+        marginVertical: 5,
+        borderRadius: 20, // Half of the width/height for circular shape
+    },
+    content: {
+        width: '100%',
+        height: '100%',
+        marginHorizontal:8,
     },
     flat: {
         flex: 1,
