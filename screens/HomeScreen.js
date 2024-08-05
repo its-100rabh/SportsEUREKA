@@ -183,6 +183,7 @@ const HomeScreen = () => {
                 alignSelf: "flex-start",
                 marginTop: 10,
               }}
+              onPress={() => navigation.navigate("The MMA Club")}
             >
               <Text
                 style={{
