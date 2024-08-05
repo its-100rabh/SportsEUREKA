@@ -258,6 +258,7 @@ const HomeScreen = () => {
                 alignSelf: "flex-start",
                 marginTop: 10,
               }}
+              onPress={() => navigation.navigate("The F1 Club")}
             >
               <Text
                 style={{

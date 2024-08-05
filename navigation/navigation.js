@@ -19,6 +19,7 @@ import F1Motorsports from "../sport_screens/F1";
 import NewsOverview from "../screens/NewsOverview";
 import NewsScreen from "../screens/NewsScreen";
 import MMAClub from "../club_screens/MMAClub";
+import F1Club from "../club_screens/F1Club";
 const Stack = createNativeStackNavigator();
 // import { View, Text } from 'react-native'
 // import React from 'react'
@@ -116,6 +117,11 @@ export default function AppNavigation() {
           options={{ headerShown: false }}
           name="The MMA Club"
           component={MMAClub}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="The F1 Club"
+          component={F1Club}
         />
         </Stack.Group>
         <Stack.Screen
