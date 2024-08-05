@@ -114,12 +114,12 @@ export default function AppNavigation() {
         </Stack.Group>
         <Stack.Group>
         <Stack.Screen
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
           name="The MMA Club"
           component={MMAClub}
         />
         <Stack.Screen
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
           name="The F1 Club"
           component={F1Club}
         />
